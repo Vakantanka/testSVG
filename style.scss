@@ -1,0 +1,31 @@
+$darkPrimaryColor: #1976D2;
+$lightPrimaryColor: #BBDEFB;
+$primaryColor: #2196F3;
+$iconColor: #FFFFFF;
+$accentColor: #03A9F4;
+$primaryTextColor: #212121;
+$secondaryTextColor: #757575;
+$dividerColor: #BDBDBD;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $primaryTextColor;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // width: 100vw;
+    // height: 100vh;
+}
+
+h1 {
+    color: $darkPrimaryColor;
+    font-size: 36px;
+    font-weight: 900;
+    // transform: translate(0, -50%);
+}
+
+
