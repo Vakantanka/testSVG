@@ -28,4 +28,20 @@ h1 {
     // transform: translate(0, -50%);
 }
 
+div#svgContainer {
+    width: 50vw;
+}
 
+svg {
+    width: 50vw;
+}
+
+.red {
+    // background-color: red;
+    // color: red;
+    // fill: red;
+}
+.table:hover {
+    cursor: pointer;
+    filter: invert(50%) sepia(50%) saturate(1000%);
+}

@@ -20,4 +20,18 @@ h1 {
   font-size: 36px;
   font-weight: 900;
 }
+
+div#svgContainer {
+  width: 50vw;
+}
+
+svg {
+  width: 50vw;
+}
+
+.table:hover {
+  cursor: pointer;
+  -webkit-filter: invert(50%) sepia(50%) saturate(1000%);
+          filter: invert(50%) sepia(50%) saturate(1000%);
+}
 /*# sourceMappingURL=style.css.map */
