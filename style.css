@@ -4,15 +4,7 @@ body {
 }
 
 #root {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: #FFFFFF;
 }
 
 h1 {
@@ -21,15 +13,65 @@ h1 {
   font-weight: 900;
 }
 
-div#svgContainer {
-  width: 50vw;
+div#reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 36px;
 }
 
-svg {
-  width: 50vw;
+div#reservation h3 {
+  width: 100%;
+  margin-bottom: 36px;
+  text-align: center;
+  color: #1976D2;
+  font-size: 24px;
+  font-weight: 400;
 }
 
-.table:hover {
+div#reservation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 36px;
+}
+
+div#reservation form input[type="date"], div#reservation form input[type="number"], div#reservation form select {
+  max-width: 240px;
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 0 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1976D2;
+  border: 1px solid;
+  outline: none;
+}
+
+div#reservation div#svgContainer svg {
+  width: 50vw;
+  height: auto;
+}
+
+div#reservation div#svgContainer .table:hover {
   cursor: pointer;
   -webkit-filter: invert(50%) sepia(50%) saturate(1000%);
           filter: invert(50%) sepia(50%) saturate(1000%);
