@@ -57,13 +57,28 @@ const renderPage = () => {
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
+    let hour = date.getHours();
     if (month < 10) month = "0" + month;
     if (day < 10) day = "0" + day;
     let today = year + "-" + month + "-" + day;       
         
     let timeZoneOptions = '';
+    let selected = "";
+    let i = true;
     for (const timeZone of timeZoneList) {
-        timeZoneOptions += `<option value="${timeZone.timeStart} - ${timeZone.timeEnd}">${timeZone.name}: ${timeZone.timeStart} - ${timeZone.timeEnd}</option>`;
+        let disabled = "";
+        if (parseInt(timeZone.timeStart) >= hour) {
+            if (i) {
+                selected = `selected="selected"`;
+                i = false;
+            }
+        } else {
+            disabled = `disabled="disabled"`;
+        }
+        timeZoneOptions += `<option value="${timeZone.timeStart} - ${timeZone.timeEnd}" ${selected} ${disabled}>${timeZone.name}: ${timeZone.timeStart} - ${timeZone.timeEnd}</option>`;
+        if (i === false) {
+            selected = "";
+        }
     }
 
     let returnHTML = `
