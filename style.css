@@ -23,12 +23,14 @@ div#reservation {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 36px;
 }
 
 div#reservation h3 {
   width: 100%;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   text-align: center;
   color: #1976D2;
   font-size: 24px;
@@ -49,7 +51,7 @@ div#reservation form {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-right: 36px;
+  margin: 0 auto;
 }
 
 div#reservation form input[type="date"], div#reservation form input[type="number"], div#reservation form select {
@@ -66,8 +68,13 @@ div#reservation form input[type="date"], div#reservation form input[type="number
   outline: none;
 }
 
+div#reservation div#svgContainer {
+  margin-bottom: 36px;
+}
+
 div#reservation div#svgContainer svg {
   width: 50vw;
+  min-width: 500px;
   height: auto;
 }
 
@@ -75,5 +82,10 @@ div#reservation div#svgContainer .table:hover {
   cursor: pointer;
   -webkit-filter: invert(50%) sepia(50%) saturate(1000%);
           filter: invert(50%) sepia(50%) saturate(1000%);
+}
+
+div#reservation div#reservations {
+  width: 25vw;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

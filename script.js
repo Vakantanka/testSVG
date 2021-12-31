@@ -31,6 +31,26 @@ const timeZoneList = [
     }
 ]
 
+const reservationsTimeline = (tables) => {
+    let tableList = "";
+    for (const table of tables) {
+        let tableId = table.id.substring(table.id.lastIndexOf("_")+1);
+        tableList += `
+            <tr>
+                <td>
+                    ${tableId}
+                </td>
+            </tr>
+        `;
+    }
+    let returnHTML = `
+        <table>
+            ${tableList}
+        </table>
+    `;
+    return returnHTML;
+}
+
 const renderPage = () => {
     
     let date = new Date();
@@ -63,7 +83,9 @@ const renderPage = () => {
         <div id="svgContainer">
             <h3>Pick a table</h3>
         </div>
-        <div id="">
+        <div id="reservations">
+            <h3>Reservations - timeline</h3>
+        </div>
     </div>
     `;
     return returnHTML;
@@ -83,7 +105,8 @@ async function loadEvent() {
             table.addEventListener("click",function(evt) {
                 console.log(table.id);
             }, false);
-        }    
+        }
+        document.getElementById("reservations").insertAdjacentHTML("beforeend",reservationsTimeline(tableList));
     })
     .catch(function (err) {
         console.log("Something went wrong!", err);
